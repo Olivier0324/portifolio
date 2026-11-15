@@ -147,12 +147,12 @@ export const experience = [
 // liveUrl / repoUrl: leave "" to hide a button.
 export const projects = [
     {
-        name: "Campus Connect",
+        name: "Eba Observa",
         cat: "Full Stack",
-        desc: "A student services platform with role-based dashboards, announcements and request tracking.",
+        desc: "A web application that allows users to monitor and analyze environmental data collected from IoT devices. It provides real-time insights into ecosystem conditions, enabling informed decision-making for conservation efforts.",
         tech: ["React", "Node.js", "MongoDB"],
         image:
-            "/public/assets/images/projects/eba-observa.png",
+            "assets/images/projects/eba-observa.png",
         liveUrl: "https://eba-iot-system-frontend.vercel.app/",
         repoUrl: "https://github.com/Olivier0324/-eba-iot-system-frontend",
     }
