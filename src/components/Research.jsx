@@ -10,7 +10,7 @@ export default function Research() {
         <Heading
           dark
           title="Research interests"
-          sub="Questions I'm working on, from business technology to developer experience."
+          sub="Questions I'm working on, from environmental technology to developer experience."
         />
         <div className="grid gap-6 md:grid-cols-3">
           {research.map((r) => (

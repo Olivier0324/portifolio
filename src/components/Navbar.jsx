@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#top" className={`font-display text-xl text-white ${focus}`}>
           {site.brand}
-          <span className="text-amber-500">.</span>dev
+          <span className="text-amber-500">.</span>
         </a>
         <nav
           className="hidden gap-7 text-sm text-slate-300 lg:flex"

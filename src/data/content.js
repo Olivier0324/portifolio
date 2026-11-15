@@ -11,7 +11,7 @@ export const site = {
     location: "Rwanda",
     photo: "/assets/images/olivier.png",
     cv: "assets/files/cv.pdf", // leave "" to hide the Download CV button
-    availability: "Open to internships and freelance work",
+    availability: "Open to opportunities", // e.g. "Available for hire"
     intro:
         "Software Engineer from Rwanda, focused on frontend development. I turn ideas and designs into fast, accessible and visually engaging web applications.",
     // The words the hero types, one after another
@@ -24,12 +24,12 @@ export const site = {
     ],
     // Paste a Formspree link here (https://formspree.io/f/xxxx) to receive messages by email.
     // Leave "" and the form opens the visitor's email app instead.
-    formEndpoint: "",
+    web3formsKey: import.meta.env.VITE_WEB3FORMS_KEY,
     // platform: github | linkedin | instagram | whatsapp | twitter | email
     socials: [
         { platform: "github", url: "https://github.com/Olivier0324/" }, // EDIT
-        { platform: "linkedin", url: "https://linkedin.com/in/your-profile" }, // EDIT
-        { platform: "email", url: "cyuzuzokwizeraolivier2@gmail.com" },
+        { platform: "linkedin", url: "https://www.linkedin.com/in/cyuzuzo-kwizera-olivier-b400b733b/" }, // EDIT
+        
     ],
 };
 
@@ -186,21 +186,10 @@ export const certifications = [
 // EDIT: file or link are optional (e.g. "assets/files/my-paper.pdf")
 export const research = [
     {
-        title: "Digital tools and small-business performance in Rwanda",
+        title: "IoT-based Monitoring System for Ecosystem-Based Adaptation",
         status: "Ongoing",
-        text: "How affordable software changes record-keeping, sales and growth for small enterprises.",
+        text: "How can IoT technology improve the monitoring and evaluation of ecosystem restoration and environmental conditions?",
         link: "",
     },
-    {
-        title: "Technology adoption among university students",
-        status: "Under review",
-        text: "A journal manuscript on what encourages students to use digital learning platforms.",
-        link: "",
-    },
-    {
-        title: "Developer documentation and API usability",
-        status: "Personal inquiry",
-        text: "Studying how clear API documentation shortens the time it takes to integrate a backend.",
-        link: "",
-    },
+    
 ];

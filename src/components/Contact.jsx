@@ -13,7 +13,7 @@ export default function Contact() {
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
-  const submit = async (e) => {
+  /*const submit = async (e) => {
     e.preventDefault();
 
     // No form service set up: open the visitor's email app with the message ready to send.
@@ -42,7 +42,42 @@ export default function Contact() {
       setStatus("error");
     }
   };
+  */
+  const submit = async (e) => {
+    e.preventDefault();
 
+    // No access key yet: open the visitor's email app with the message ready to send.
+    if (!site.web3formsKey) {
+      const body = encodeURIComponent(
+        `${form.message}\n\n${form.name} (${form.email})`,
+      );
+      window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(`Portfolio message from ${form.name}`)}&body=${body}`;
+      return;
+    }
+
+    setStatus("sending");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: site.web3formsKey,
+          subject: `Portfolio message from ${form.name}`,
+          from_name: "Portfolio website",
+          ...form, // name, email, message
+        }),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message || "Failed");
+      setStatus("sent");
+      setForm(empty);
+    } catch {
+      setStatus("error");
+    }
+  };
   return (
     <section
       id="contact"
