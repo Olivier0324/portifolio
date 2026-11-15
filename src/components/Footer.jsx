@@ -28,8 +28,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="mt-6 text-center text-sm">
-        © {new Date().getFullYear()} {site.name}. All rights reserved.
-        CSS.
+        © {new Date().getFullYear()} {site.name}. 
       </p>
     </footer>
   );
