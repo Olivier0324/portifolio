@@ -172,7 +172,7 @@ export const certifications = [
         by: "ALX",
         year: "2025",
         link: "",
-        image: "public\assets\images\certs\alx.png",
+        image: "assets/images/certs/alx.png",
     },
     {
         name: "UX Design Foundations",
