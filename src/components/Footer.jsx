@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <a href="#top" className="font-display text-xl text-white">
           {site.brand}
-          <span className="text-amber-500">.</span>dev
+          <span className="text-amber-500">.</span>
         </a>
         <nav
           className="flex flex-wrap justify-center gap-5 text-sm"
@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="mt-6 text-center text-sm">
-        © {new Date().getFullYear()} {site.name}. Built with React and Tailwind
+        © {new Date().getFullYear()} {site.name}. All rights reserved.
         CSS.
       </p>
     </footer>
